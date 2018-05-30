@@ -1,0 +1,50 @@
+http://echarts.baidu.com/examples/editor.html?c=radar&theme=light
+
+option = {
+    title: {
+        text: '配置中心综合对比'
+    },
+    tooltip: {},
+    legend: {
+        data: ['Apollo', 'QConf','Disconf']
+    },
+    radar: {
+        // shape: 'circle',
+        name: {
+            textStyle: {
+                color: '#fff',
+                backgroundColor: '#999',
+                borderRadius: 3,
+                padding: [3, 5]
+           }
+        },
+        indicator: [
+           { name: '功能', max: 100},
+           { name: '性能', max: 100},
+           { name: '版本维护', max: 100},
+           { name: '稳定性', max: 100},
+           { name: '文档', max: 100},
+           { name: '趋势', max: 100},
+           { name: '学习成本', max: 100},
+        ]
+    },
+    series: [{
+        name: '配置中心综合对比',
+        type: 'radar',
+        // areaStyle: {normal: {}},
+        data : [
+            {
+                value : [100, 80, 100, 100, 100, 80, 60],
+                name : 'Apollo'
+            },
+             {
+                value : [70, 100, 80, 80, 80, 80, 80],
+                name : 'QConf'
+            },
+             {
+                value : [50, 60, 50, 70, 60, 80, 100],
+                name : 'Disconf'
+            }
+        ]
+    }]
+};
